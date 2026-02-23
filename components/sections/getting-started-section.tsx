@@ -1,11 +1,12 @@
 import { Terminal } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { siteConfig } from "@/lib/config";
 
 export function GettingStartedSection() {
   const steps = [
     {
       title: "저장소 복제",
-      command: "git clone https://github.com/your-repo/nextjs-starterkit.git",
+      command: `git clone ${siteConfig.githubUrl}.git`,
     },
     {
       title: "의존성 설치",

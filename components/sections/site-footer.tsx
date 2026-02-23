@@ -1,6 +1,7 @@
-import { Github, ExternalLink } from "lucide-react";
+import { Github } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
+import { siteConfig } from "@/lib/config";
 
 export function SiteFooter() {
   const currentYear = new Date().getFullYear();
@@ -12,7 +13,7 @@ export function SiteFooter() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* 브랜드 */}
           <div>
-            <h4 className="font-bold text-lg mb-2">Next.js Starterkit</h4>
+            <h4 className="font-bold text-lg mb-2">{siteConfig.name}</h4>
             <p className="text-sm text-muted-foreground">
               현대적인 웹 개발을 위한 완벽한 시작점
             </p>
@@ -60,7 +61,7 @@ export function SiteFooter() {
                 className="h-10 w-10"
               >
                 <a
-                  href="https://github.com"
+                  href={siteConfig.githubUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="GitHub"
@@ -76,7 +77,7 @@ export function SiteFooter() {
 
         {/* 저작권 */}
         <div className="pt-6 text-center text-sm text-muted-foreground">
-          <p>&copy; {currentYear} Next.js Starterkit. All rights reserved.</p>
+          <p>&copy; {currentYear} {siteConfig.name}. All rights reserved.</p>
         </div>
       </div>
     </footer>
