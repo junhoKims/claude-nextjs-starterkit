@@ -3,10 +3,14 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { siteConfig } from "@/lib/config";
 
 export function GettingStartedSection() {
+  const repoCloneUrl = siteConfig.githubUrl.endsWith(".git")
+    ? siteConfig.githubUrl
+    : `${siteConfig.githubUrl}.git`;
+
   const steps = [
     {
       title: "저장소 복제",
-      command: `git clone ${siteConfig.githubUrl}.git`,
+      command: `git clone ${repoCloneUrl}`,
     },
     {
       title: "의존성 설치",
@@ -23,7 +27,7 @@ export function GettingStartedSection() {
       <div className="space-y-8">
         {/* 제목 */}
         <div className="text-center">
-          <h3 className="text-2xl md:text-3xl font-bold">시작하기</h3>
+          <h2 className="text-2xl md:text-3xl font-bold">시작하기</h2>
           <p className="text-muted-foreground mt-2">
             몇 가지 간단한 명령어로 바로 시작할 수 있습니다.
           </p>
@@ -32,7 +36,7 @@ export function GettingStartedSection() {
         {/* 설치 단계 */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {steps.map((step, index) => (
-            <Card key={index}>
+            <Card key={step.title}>
               <CardHeader>
                 <div className="flex items-center gap-2">
                   <span className="flex h-6 w-6 items-center justify-center rounded-full bg-primary text-xs font-bold text-primary-foreground">

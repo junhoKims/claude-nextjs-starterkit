@@ -47,7 +47,7 @@ export function FeaturesSection() {
       <div className="space-y-12">
         {/* 제목 */}
         <div className="text-center">
-          <h3 className="text-2xl md:text-3xl font-bold">주요 기능</h3>
+          <h2 className="text-2xl md:text-3xl font-bold">주요 기능</h2>
           <p className="text-muted-foreground mt-2">
             생산성 높은 개발을 위한 다양한 기능들을 제공합니다.
           </p>

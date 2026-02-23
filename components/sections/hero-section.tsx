@@ -15,11 +15,11 @@ export function HeroSection() {
 
       {/* 제목 */}
       <div className="space-y-4 text-center">
-        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
           현대적인 Next.js 스타터킷
-        </h2>
+        </h1>
         <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-          Next.js 16, React 19, TailwindCSS v4, shadcn/ui로 구성된 프로덕션 레디 스타터킷으로 빠르게 시작하세요.
+          Next.js 15, React 19, TailwindCSS v4, shadcn/ui로 구성된 프로덕션 레디 스타터킷으로 빠르게 시작하세요.
         </p>
       </div>
 
